@@ -33,15 +33,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-
-
-        
         {/* ✅ Google AdSense meta tag */}
-      
-        <meta name="google-adsense-account" content="ca-pub-9096209867795576">
-        
+        <meta name="google-adsense-account" content="ca-pub-4153515799458258" />
 
-        
         {/* Structured data for SEO */}
         <script
           type="application/ld+json"
