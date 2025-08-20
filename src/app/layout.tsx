@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script"; // ✅ Import Next.js Script component
 
 export const metadata: Metadata = {
   title: "Prasunet Company - IT Consulting | IT Services | Digital Transformation",
@@ -34,17 +35,29 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* ✅ Google AdSense meta tag */}
-       
-        <meta name="google-adsense-account" content="ca-pub-9096209867795576"/>
+        <meta name="google-adsense-account" content="ca-pub-9096209867795576" />
 
-        {/* Structured data for SEO */}
+        {/* ✅ Google AdSense script */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9096209867795576"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+
+        {/* ✅ Structured data for SEO */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body className="transition-colors duration-200 ease-in-out" suppressHydrationWarning>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           {children}
           <SpeedInsights />
         </ThemeProvider>
