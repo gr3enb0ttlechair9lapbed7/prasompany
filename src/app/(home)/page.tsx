@@ -110,20 +110,21 @@ export default function Home() {
       </p>
       <div className="mt-4 space-y-3 w-4/5 md:w-3/5">
         {[
-          { title: "Advanced IT Consulting", percentage: 98 },
-          { title: "Business Process Optimization", percentage: 93 },
-          { title: "Digital Transformation Strategies", percentage: 95 }
-        ].map((item, index) => (
-          <div key={index} className="relative mb-3">
-            <div className="flex justify-between">
-              <p className="text-gray-800 font-semibold">{item.title}</p>
-              <span className="text-gray-800 font-semibold">{item.percentage}%</span>
-            </div>
-            <div className="relative w-full bg-gray-300 rounded-full h-2.5 mt-1">
-              <div className="bg-[#3CAF58] h-2.5 rounded-full" style={{ width: ${item.percentage}% }}></div>
-            </div>
-          </div>
-        ))}
+  { title: "Advanced IT Consulting", percentage: 98 },
+  { title: "Business Process Optimization", percentage: 93 },
+  { title: "Digital Transformation Strategies", percentage: 95 }
+].map((item, index) => (
+  <div key={index} className="relative mb-3">
+    <div className="flex justify-between">
+      <p className="text-gray-800 font-semibold">{item.title}</p>
+      <span className="text-gray-800 font-semibold">{item.percentage}%</span>
+    </div>
+    <div className="relative w-full bg-gray-300 rounded-full h-2.5 mt-1">
+      <div className="bg-[#3CAF58] h-2.5 rounded-full" style={{ width: `${item.percentage}%` }}></div>
+    </div>
+  </div>
+))}
+
       </div>
     </div>
     
