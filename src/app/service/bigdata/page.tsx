@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { FaDatabase, FaChartBar, FaServer, FaShieldAlt, FaCogs, FaCloud } from "react-icons/fa";
 import Navbar from "@/components/home/header/navbar";
 import Footer from "@/components/home/footer-section";
@@ -58,7 +59,13 @@ export default function BigDataSolutions() {
             <li>✔ Cloud-based Big Data Platforms</li>
           </ul>
         </div>
-        <img src="/servicesimages/softwaredevelopmentimg1.jpg" alt="Big Data Strategy" className="rounded-2xl shadow-lg" />
+        <Image
+          src="/servicesimages/softwaredevelopmentimg1.jpg"
+          alt="Big Data Strategy"
+          width={600}
+          height={400}
+          className="rounded-2xl shadow-lg"
+        />
       </section>
 
       {/* Big Data Services */}
@@ -130,7 +137,13 @@ export default function BigDataSolutions() {
               { name: "Manufacturing", img: "/servicesimages/manufacturing.jpeg", text: "Predictive maintenance and supply chain optimization." }
             ].map((ind, idx) => (
               <div key={idx} className="bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition">
-                <img src={ind.img} alt={ind.name} className="h-40 w-full object-cover" />
+                <Image
+                  src={ind.img}
+                  alt={ind.name}
+                  width={400}
+                  height={250}
+                  className="h-40 w-full object-cover"
+                />
                 <div className="p-4 text-left">
                   <h3 className="font-semibold text-lg text-blue-800 mb-2">{ind.name}</h3>
                   <p className="text-gray-600 text-sm">{ind.text}</p>
@@ -168,7 +181,13 @@ export default function BigDataSolutions() {
             ].map((cs, idx) => (
               <div key={idx} className="flex flex-col md:flex-row bg-blue-50 rounded-xl overflow-hidden shadow hover:shadow-xl">
                 <div className="md:w-1/2 h-64 md:h-auto">
-                  <img src={cs.img} alt={cs.title} className="w-full h-full object-cover" />
+                  <Image
+                    src={cs.img}
+                    alt={cs.title}
+                    width={600}
+                    height={400}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="md:w-1/2 p-6">
                   <h3 className="text-2xl font-semibold text-blue-900 mb-2">{cs.title}</h3>
@@ -205,8 +224,11 @@ export default function BigDataSolutions() {
       <section className="py-20 px-6 bg-blue-700 text-white text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-4">Ready to Harness Big Data?</h2>
-          <p className="text-lg mb-6">Let's build powerful, scalable solutions that turn data into business growth.</p>
-          <a href="/contact" className="inline-block bg-white text-blue-700 px-8 py-3 font-semibold rounded-lg shadow hover:bg-gray-200 transition">
+          <p className="text-lg mb-6">Let&apos;s build powerful, scalable solutions that turn data into business growth.</p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-700 px-8 py-3 font-semibold rounded-lg shadow hover:bg-gray-200 transition"
+          >
             Get a Free Consultation
           </a>
         </div>
