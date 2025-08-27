@@ -61,8 +61,9 @@ const ProjectMore = () => {
         <div className="text-center mb-16">
           <h1 className="text-5xl font-extrabold mb-4">Our Projects</h1>
           <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-            Explore Prasunet's wide range of innovative projects across AI, Web Development, Cybersecurity, IoT, Blockchain, and more. Each project demonstrates our expertise, creativity, and impact in driving digital transformation.
-          </p>
+  Explore Prasunet&apos;s wide range of innovative projects across AI, Web Development, Cybersecurity, IoT, Blockchain, and more. Each project demonstrates our expertise, creativity, and impact in driving digital transformation.
+</p>
+
         </div>
 
         {/* Project Grid */}
