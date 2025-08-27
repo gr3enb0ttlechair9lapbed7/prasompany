@@ -19,37 +19,13 @@ import {
 } from "react-icons/fa";
 
 const TechNewsPage = () => {
-  [
-  {
-    title: "AI Revolution: ChatGPT is Changing the World",
-    slug: "ai-revolution-chatgpt-is-changing-the-world",
-    desc: "Artificial Intelligence is reshaping industries from healthcare to education...",
-    img: "/chatgptimg.webp",
-    author: "Tech Analyst",
-    date: "Aug 21, 2025",
-    category: "Artificial Intelligence",
-  },
-  {
-    title: "Meta Launches New AR Glasses",
-    slug: "meta-launches-new-ar-glasses",
-    desc: "Meta introduces lightweight AR glasses designed for immersive experiences...",
-    img: "/metaglass.jpg",
-    author: "Sarah Lee",
-    date: "Aug 19, 2025",
-    category: "AR & VR",
-  },
-  {
-    title: "Cybersecurity Threats Surge in 2025",
-    slug: "cybersecurity-threats-surge-in-2025",
-    desc: "Experts warn of deepfake attacks, ransomware, and phishing scams...",
-    img: "/cybersecurity2025.jpg",
-    author: "John Carter",
-    date: "Aug 17, 2025",
-    category: "Cybersecurity",
-  },
+  // removed unused array
+  const newsItems = [ ... ];
+  const magazines = [ ... ];
+  const videos = [ ... ];
 
-
-  ];
+  return ( ... );
+};
   const newsItems = [
   {
     title: "Quantum Leap",
