@@ -14,142 +14,169 @@ import Services from "@/components/home/Services";
 import Stats from "@/components/home/stat";
 import Testimonials from "@/components/home/testimonail";
 import Industries from "@/components/home/Industries";
-import Image from "next/image"; 
+import Message from "@/components/home/message";
+
+
+import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
-
+import { motion } from "framer-motion";
+import { Lightbulb, Rocket, Users, Star } from "lucide-react";
+import { Target, TrendingUp, Briefcase, Globe } from "lucide-react";
+import {  Search, BarChart, Code } from "lucide-react";
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
-
-  return ( 
+  const steps = [
+{
+      num: "01",
+      title: "Consult & Research",
+      desc: "Understanding client needs and mapping opportunities.",
+      icon: <Search size={28} />,
+    },
+    {
+      num: "02",
+      title: "Strategy & Planning",
+      desc: "Designing smart, scalable, and data-driven strategies.",
+      icon: <BarChart size={28} />,
+    },
+    {
+      num: "03",
+      title: "Build & Execute",
+      desc: "Delivering innovative IT solutions with precision.",
+      icon: <Code size={28} />,
+    },
+    {
+      num: "04",
+      title: "Optimize & Scale",
+      desc: "Continuous improvement for long-term growth.",
+      icon: <TrendingUp size={28} />,
+    },
+  ];
+  return (
     <div>
       <Navbar />
       <HeroSection />
 
-      {/* Section with Image on Left and Text on Right */}
-      <section 
-        className={`relative w-full py-16 flex flex-col md:flex-row items-center justify-center gap-10 px-6 transition-all duration-500 ${
-          isHovered ? "bg-green-50" : "bg-white"
-        }`}
-      >
-        {/* Left: Image Section */}
-        <div className="w-full md:w-2/5 flex justify-center">
-          <div 
-            className="relative w-[300px] h-[350px] md:w-[350px] md:h-[400px] cursor-pointer"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            <div 
-              className={`absolute inset-0 bg-[#3CAF58] rounded-lg transition-transform duration-300 ${
-                isHovered ? "translate-x-3" : "translate-x-0"
-              }`}
-            ></div>
-            <div 
-              className="relative w-full h-full transition-transform duration-300"
-              style={{
-                transform: isHovered ? "rotate(6deg)" : "rotate(0deg)",
-              }}
-            >
+     {/* WHO WE ARE */}
+      <section className="relative w-full py-20 bg-gradient-to-r from-gray-50 to-white overflow-hidden">
+        <div className="container mx-auto flex flex-col md:flex-row items-center gap-12 px-6">
+          {/* Left Image with Overlay */}
+          <div className="relative w-full md:w-1/2 flex justify-center">
+            <div className="relative w-[320px] h-[400px] md:w-[420px] md:h-[500px] rounded-2xl shadow-xl overflow-hidden group">
               <Image
-                src="/imagewhoweare.jpg" 
-                alt="Creative Team"
+                src="/whoweare.jpg"
+                alt="Professional Team"
                 layout="fill"
                 objectFit="cover"
-                className="rounded-lg shadow-lg"
+                className="rounded-2xl group-hover:scale-105 transition-transform duration-500"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#3CAF58]/80 to-transparent mix-blend-multiply"></div>
+              <div className="absolute bottom-4 left-4 text-white">
+                <p className="font-semibold uppercase text-sm tracking-wider">
+                  Creative & Professional
+                </p>
+                <h3 className="text-2xl font-bold">Driven by Innovation</h3>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Right: Text Content */}
-        <div className="w-full md:w-3/5 text-center md:text-left">
-          <p className="text-sm text-[#3CAF58] font-semibold uppercase">Who We Are</p>
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-800 leading-tight mt-2">
-            Elevating Creativity for Your Brand!
-          </h2>
-          <p className="text-lg text-gray-700 mt-4">
-            <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent font-bold">
-              We&apos;re a team of creatives constantly brainstorming great ideas.
-            </span>{" "}
-            With our combined skills, we&apos;re capable of fulfilling all your brand&apos;s needs.
-          </p>
-          <ul className="mt-6 space-y-3">
-            <li className="flex items-center space-x-3">
-              <span className="text-[#3CAF58] text-xl">✔</span>
-              <span className="text-gray-800 font-semibold">Innovative Branding Solutions.</span>
-            </li>
-            <li className="flex items-center space-x-3">
-              <span className="text-[#3CAF58] text-xl">✔</span>
-              <span className="text-gray-800 font-semibold">Data-Driven Digital Marketing.</span>
-            </li>
-            <li className="flex items-center space-x-3">
-              <span className="text-[#3CAF58] text-xl">✔</span>
-              <span className="text-gray-800 font-semibold">Strategic Growth and Engagement.</span>
-            </li>
-          </ul>
-          <Link href="/Learnmore">
-  <button className="mt-6 px-6 py-3 bg-[#3CAF58] text-white font-bold rounded-lg shadow-md hover:bg-green-700 transition">
-    Learn More →
-  </button>
-</Link>
+          {/* Right Content */}
+          <div className="w-full md:w-1/2 text-center md:text-left">
+          
+            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+              Empowering Businesses with <br />
+              <span className="bg-gradient-to-r from-green-600 to-emerald-400 bg-clip-text text-transparent">
+                Strategy & Innovation
+              </span>
+            </h2>
+            <p className="mt-6 text-lg text-gray-700 leading-relaxed">
+              We are a team of thinkers, designers, and builders passionate
+              about delivering <strong>impactful digital solutions</strong>.
+              With a customer-first approach, we combine creativity, technology,
+              and strategy to accelerate brand growth.
+            </p>
+
+            {/* Icon Bullet Points */}
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                { icon: <Target />, text: "Focused Business Goals" },
+                { icon: <TrendingUp />, text: "Sustainable Growth" },
+                { icon: <Briefcase />, text: "Tailored Solutions" },
+                { icon: <Globe />, text: "Global Digital Reach" },
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-3">
+                  <span className="text-green-600 text-xl">{item.icon}</span>
+                  <p className="text-gray-800 font-medium">{item.text}</p>
+                </div>
+              ))}
+            </div>
+
+            <Link href="/about">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                className="mt-8 px-8 py-3 bg-[#3CAF58] text-white rounded-xl shadow-lg hover:bg-green-700 transition"
+              >
+                Discover More →
+              </motion.button>
+            </Link>
+          </div>
         </div>
       </section>
 
-     {/* What We Do Section - Hidden on Mobile */}
-<div className="hidden md:block">
-  <section className="w-full py-16 flex flex-col md:flex-row items-center justify-center gap-10 px-6 bg-gray-100 relative">
-    {/* Left: Text Content */}
-    <div className="w-full md:w-2/5 text-center md:text-left">
-      <p className="text-sm text-[#3CAF58] font-semibold uppercase">What We Do</p>
-      <h2 className="text-3xl md:text-5xl font-bold text-gray-800 leading-tight mt-2">
-        Innovative IT Solutions for a Digital Future
-      </h2>
-      <p className="text-lg text-gray-700 mt-4">
-        We are dedicated to transforming businesses through innovative IT solutions, strategic consulting, and digital excellence. Our expertise empowers organizations to thrive in an ever-evolving digital landscape.
-      </p>
-      <div className="mt-4 space-y-3 w-4/5 md:w-3/5">
-        {[
-  { title: "Advanced IT Consulting", percentage: 98 },
-  { title: "Business Process Optimization", percentage: 93 },
-  { title: "Digital Transformation Strategies", percentage: 95 }
-].map((item, index) => (
-  <div key={index} className="relative mb-3">
-    <div className="flex justify-between">
-      <p className="text-gray-800 font-semibold">{item.title}</p>
-      <span className="text-gray-800 font-semibold">{item.percentage}%</span>
-    </div>
-    <div className="relative w-full bg-gray-300 rounded-full h-2.5 mt-1">
-      <div className="bg-[#3CAF58] h-2.5 rounded-full" style={{ width: `${item.percentage}%` }}></div>
-    </div>
-  </div>
-))}
+      {/* WHAT WE DO */}
+      <section className="w-full py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative">
+        <div className="container mx-auto px-6 text-center">
+          <p className="text-sm text-[#3CAF58] font-semibold uppercase">
+            What We Do
+          </p>
 
-      </div>
-    </div>
-    
-    {/* Right: Background Image */}
-    <div className="relative w-full md:w-2/5 flex justify-end">
-      <div className="relative w-[450px] h-[400px] md:w-[450px] md:h-[500px] overflow-hidden rounded-lg shadow-lg">
-        <Image 
-          src="/imagewhatwedo.jpg" 
-          alt="Campaign Success"
-          layout="fill"
-          objectFit="cover"
-          className="rounded-lg"
-        />
-      </div>
-      <div className="absolute left-0 md:-left-30 top-1/2 transform -translate-y-1/2 w-[260px] h-[260px] md:w-[280px] md:h-[280px] rounded-full overflow-hidden border-4 border-white shadow-xl">
-        <video autoPlay loop muted className="w-full h-full object-cover rounded-full">
-          <source src="/video1.mp4" type="video/mp4" />
-        </video>
-      </div>
-    </div>
-  </section>
-</div>
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mt-2"
+          >
+            Delivering Excellence through <br />
+            <span className="bg-gradient-to-r from-green-600 to-emerald-400 bg-clip-text text-transparent">
+              Technology & Strategy
+            </span>
+          </motion.h2>
 
-      
+          <p className="mt-6 text-lg text-gray-700 max-w-3xl mx-auto">
+            We don’t just provide IT solutions – we create scalable ecosystems
+            that help businesses thrive. Our expertise lies in merging
+            creativity, analytics, and advanced technologies to solve complex
+            challenges.
+          </p>
+
+          {/* Workflow Cards */}
+          <div className="mt-12 grid md:grid-cols-4 gap-8">
+            {steps.map((step, i) => (
+              <motion.div
+                key={i}
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="p-8 bg-white rounded-2xl shadow-md border border-gray-100 transition"
+              >
+                <div className="flex justify-center text-green-600 mb-4">
+                  {step.icon}
+                </div>
+                <h3 className="text-5xl font-extrabold text-gray-200">
+                  {step.num}
+                </h3>
+                <h4 className="mt-2 text-lg font-bold text-gray-900">
+                  {step.title}
+                </h4>
+                <p className="mt-2 text-gray-600">{step.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Existing Sections */}
       <Services />
+      <Message />
       <Stats />
       <Project />
       <InternshipSection />

@@ -32,36 +32,37 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
-      <head>
-        {/* ✅ Google AdSense meta tag */}
-        <meta name="google-adsense-account" content="ca-pub-9096209867795576" />
+    <html lang="en" suppressHydrationWarning>
+  <head>
+    {/* ✅ Google AdSense meta tag */}
+    <meta name="google-adsense-account" content="ca-pub-9096209867795576" />
 
-        {/* ✅ Google AdSense script */}
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9096209867795576"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
+    {/* ✅ Google AdSense script */}
+    <Script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9096209867795576"
+      crossOrigin="anonymous"
+      strategy="afterInteractive"
+    />
 
-        {/* ✅ Structured data for SEO */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
-      <body className="transition-colors duration-200 ease-in-out" suppressHydrationWarning>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-          <SpeedInsights />
-        </ThemeProvider>
-      </body>
-    </html>
+    {/* ✅ Structured data for SEO */}
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  </head>
+  <body className="transition-colors duration-200 ease-in-out">
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange
+    >
+      {children}
+      <SpeedInsights />
+    </ThemeProvider>
+  </body>
+</html>
+
   );
 }
