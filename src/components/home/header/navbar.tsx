@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { Dancing_Script } from "next/font/google"; // Import Google Font
 
-const dancingScript = Dancing_Script({ subsets: ["latin"], weight: "700" }); // Load Font
+
+
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
