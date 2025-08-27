@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 import Navbar from "@/components/home/header/navbar";
 import Footer from "@/components/home/footer-section";
+import Image from "next/image";
 
 export default function AIMLConsulting() {
   return (
@@ -27,10 +28,7 @@ export default function AIMLConsulting() {
           playsInline
           className="absolute top-0 left-0 w-full h-full object-cover"
         >
-          <source
-            src="/servicesvideo/aivideo.mp4"
-            type="video/mp4"
-          />
+          <source src="/servicesvideo/aivideo.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/70" />
         <div className="relative z-10 text-center px-6">
@@ -57,9 +55,11 @@ export default function AIMLConsulting() {
 
       {/* About AI & ML Consulting */}
       <section className="py-16 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        <img
+        <Image
           src="/servicesimages/softwaredevelopmentimg1.jpg"
           alt="AI Consulting"
+          width={600}
+          height={400}
           className="rounded-2xl shadow-lg"
         />
         <div>
@@ -68,8 +68,9 @@ export default function AIMLConsulting() {
           </h2>
           <p className="text-gray-700 mb-4">
             Our AI & ML consulting services empower businesses to integrate
-            data-driven intelligence into operations. Whether it's automation,
-            predictive modeling, or deep learning, we help you innovate faster.
+            data-driven intelligence into operations. Whether it&apos;s
+            automation, predictive modeling, or deep learning, we help you
+            innovate faster.
           </p>
           <ul className="space-y-2 text-gray-800 list-disc list-inside">
             <li>AI-driven automation strategy</li>
@@ -176,9 +177,11 @@ export default function AIMLConsulting() {
                 key={idx}
                 className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition"
               >
-                <img
+                <Image
                   src={ind.img}
                   alt={ind.name}
+                  width={400}
+                  height={150}
                   className="h-36 w-full object-cover"
                 />
                 <div className="p-4 text-left">
@@ -205,19 +208,31 @@ export default function AIMLConsulting() {
                 title: "Predictive Analytics in Finance",
                 img: "/servicesimages/online-banking.jpg",
                 desc: "Helped a bank implement AI-driven risk models, reducing fraud by 40%.",
-                bullets: ["Real-time risk scoring", "Automated decision-making", "Cost savings"],
+                bullets: [
+                  "Real-time risk scoring",
+                  "Automated decision-making",
+                  "Cost savings",
+                ],
               },
               {
                 title: "AI for Healthcare Diagnostics",
                 img: "/servicesimages/healthcareai.jpg",
                 desc: "Deployed machine learning to speed up medical imaging analysis.",
-                bullets: ["95% accurate diagnostics", "Faster patient treatment", "Reduced manual work"],
+                bullets: [
+                  "95% accurate diagnostics",
+                  "Faster patient treatment",
+                  "Reduced manual work",
+                ],
               },
               {
                 title: "Retail Recommendation Engine",
                 img: "/servicesimages/retailerp.webp",
                 desc: "Enabled a retail chain to boost sales by 30% with personalized offers.",
-                bullets: ["Customer segmentation", "Smart product recommendations", "Increased engagement"],
+                bullets: [
+                  "Customer segmentation",
+                  "Smart product recommendations",
+                  "Increased engagement",
+                ],
               },
             ].map((cs, idx) => (
               <div
@@ -225,9 +240,11 @@ export default function AIMLConsulting() {
                 className="flex flex-col md:flex-row bg-gray-50 rounded-xl overflow-hidden shadow hover:shadow-xl"
               >
                 <div className="md:w-1/2 h-64">
-                  <img
+                  <Image
                     src={cs.img}
                     alt={cs.title}
+                    width={600}
+                    height={256}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -276,7 +293,7 @@ export default function AIMLConsulting() {
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-4xl font-bold mb-3">Ready to Embrace AI?</h2>
           <p className="text-lg mb-6">
-            Let's collaborate to build intelligent solutions for your business.
+            Let&apos;s collaborate to build intelligent solutions for your business.
           </p>
           <a
             href="/contact"
