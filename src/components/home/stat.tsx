@@ -79,6 +79,37 @@ const ServicesPage = () => {
           </div>
         </div>
       </section>
+ <section className="relative w-full h-screen flex items-center justify-center text-white">
+  {/* Background Video */}
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute inset-0 w-full h-full object-contain bg-black"
+  >
+    <source src="/servicesvideo/globetech.mp4" type="video/mp4" />
+  </video>
+
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/50"></div>
+
+  {/* Content */}
+  <div className="relative z-10 max-w-4xl text-center px-6">
+    <h3 className="text-4xl md:text-5xl font-bold mb-4">
+      Global Presence <span className="text-blue-400">(65+ countries)</span>
+    </h3>
+    <p className="text-lg md:text-xl mb-6">
+      Our global footprint ensures local expertise, seamless collaboration, and faster project delivery. 
+      From AI-powered platforms to enterprise solutions, we empower businesses worldwide to achieve 
+      growth, efficiency, and digital transformation.
+    </p>
+    <p className="text-base text-gray-200">
+      With strategically located hubs, a network of skilled professionals, and cutting-edge technology, 
+      Prasunet connects innovation with impact—no matter where your business is.
+    </p>
+  </div>
+</section>
 
       {/* ...rest of your code */}
     </div>
