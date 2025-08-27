@@ -8,7 +8,7 @@ const backgroundData = [
     src: "/background1.jpg",
     title: "Creating and Transforming Companies",
     content:
-      "Prasunet has empowered 100+ companies by turning ideas into successful products. We specialize in advanced application development, legacy modernization, and innovative tech solutions to drive business growth."
+      "Prasunet helps businesses transform ideas into impactful products. We excel in modern application development, legacy system upgrades, and innovative technology solutions that accelerate digital growth"
   },
   {
     src: "/background2.jpg",
@@ -84,44 +84,48 @@ const HeroSection = () => {
       </div>
 
       {/* Wave Animation */}
-      <div
-        className="absolute bottom-0 left-0 w-full h-[100px] md:h-[120px]"
-        style={{
-          backgroundImage: "url('/wave.png')",
-          backgroundSize: "1000px 120px",
-          animation: "waveMove 8s linear infinite",
-        }}
-      ></div>
+      {/* Wave Animation */}
+<div className="absolute bottom-0 left-0 w-full overflow-hidden h-[100px] md:h-[120px]">
+  <div
+    className="absolute bottom-0 left-0 w-[200%] h-full bg-bottom bg-repeat-x"
+    style={{
+      backgroundImage: "url('/wave.png')",
+      backgroundSize: "contain",
+      animation: "waveMove 8s linear infinite",
+    }}
+  ></div>
 
-      <div
-        className="absolute bottom-0 left-0 w-full h-[100px] md:h-[120px] opacity-40"
-        style={{
-          backgroundImage: "url('/wave.png')",
-          backgroundSize: "1000px 120px",
-          animation: "waveMove 6s linear infinite reverse",
-        }}
-      ></div>
+  <div
+    className="absolute bottom-0 left-0 w-[200%] h-full opacity-40 bg-bottom bg-repeat-x"
+    style={{
+      backgroundImage: "url('/wave.png')",
+      backgroundSize: "contain",
+      animation: "waveMove 6s linear infinite reverse",
+    }}
+  ></div>
 
-      <div
-        className="absolute bottom-0 left-0 w-full h-[100px] md:h-[120px] opacity-70"
-        style={{
-          backgroundImage: "url('/wave.png')",
-          backgroundSize: "1000px 120px",
-          animation: "waveMove 4s linear infinite",
-        }}
-      ></div>
+  <div
+    className="absolute bottom-0 left-0 w-[200%] h-full opacity-70 bg-bottom bg-repeat-x"
+    style={{
+      backgroundImage: "url('/wave.png')",
+      backgroundSize: "contain",
+      animation: "waveMove 4s linear infinite",
+    }}
+  ></div>
+</div>
 
-      {/* Inline Keyframes */}
-      <style jsx>{`
-        @keyframes waveMove {
-          0% {
-            background-position: 0px;
-          }
-          100% {
-            background-position: 1000px;
-          }
-        }
-      `}</style>
+{/* Smooth Keyframes */}
+<style jsx>{`
+  @keyframes waveMove {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+`}</style>
+
     </section>
   );
 };

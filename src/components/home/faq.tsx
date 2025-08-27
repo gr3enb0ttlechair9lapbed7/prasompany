@@ -3,31 +3,28 @@
 import React, { useState } from "react";
 
 const faqData = [
-  {
-    question: "Who is Prasunet Pvt. Ltd. company?",
-    answer:
-      "Prasunet Pvt. Ltd. is a global technology company specializing in software development, IT consulting, and digital transformation solutions. With expertise in AI, cloud computing, cybersecurity, and enterprise solutions, Prasunet empowers businesses with cutting-edge technology. Headquartered in India, the company serves clients worldwide, delivering innovative and scalable IT services tailored to modern business needs.",
-  },
-  {
-    question: "How can Prasunet help businesses with digital transformation?",
-    answer:
-      "We offer IT strategy consulting, automation solutions, and cloud migration services to streamline business processes and enhance efficiency.",
-  },
-  {
-    question: "Does Prasunet provide custom software development?",
-    answer:
-      "Yes, we specialize in developing custom software, enterprise applications, and SaaS platforms tailored to business needs.",
-  },
-  {
-    question: "What industries does Prasunet cater to?",
-    answer:
-      "We serve various industries, including healthcare, finance, e-commerce, manufacturing, and logistics.",
-  },
-  {
-    question: "How does Prasunet ensure cybersecurity for its clients?",
-    answer:
-      "Our cybersecurity services include network security, data encryption, risk assessment, and vulnerability management to protect businesses.",
-  },
+{
+  question: "What services does Prasunet offer globally?",
+  answer:
+    "Prasunet offers IT consulting, software development, cloud integration, cybersecurity, and digital transformation services. We help global clients build secure, scalable, and innovative technology solutions effectively."
+},
+{
+  question: "Does Prasunet support startups and small businesses?",
+  answer:
+    "Yes, Prasunet supports startups and small businesses with product development, branding, and IT solutions. We provide affordable, scalable, and innovative technology support to accelerate sustainable growth."
+},
+{
+  question: "What makes Prasunet different from other IT companies?",
+  answer:
+    "Prasunet focuses on client-centric innovation, combining consulting with technology expertise. Our tailored solutions drive measurable impact, competitive advantage, and long-term success across industries worldwide with efficiency."
+},
+{
+  question: "Does Prasunet provide cloud and DevOps solutions?",
+  answer:
+    "Yes, Prasunet delivers cloud computing and DevOps services, including migration, automation, and CI/CD. We improve scalability, reduce costs, and enhance system performance for digital success."
+}
+
+
 ];
 
 const Faq = () => {

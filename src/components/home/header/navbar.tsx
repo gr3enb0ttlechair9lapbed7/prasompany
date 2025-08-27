@@ -12,18 +12,19 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-          {/* Left Section - Logo & Brand Name */}
-          <div className="flex items-center gap-9">
-            <Link href="/" className="flex items-center space-x-2">
-              <Image src="/loggo.jpg" alt="Prasunet Logo" width={40} height={40} />
-              <span className={`${dancingScript.className} text-lg font-bold tracking-widest text-gray-900 drop-shadow-lg scale-x-125`}>
-                PRASUNET
-              </span>
-            </Link>
-          </div>
+   <nav className="sticky top-0 z-50 w-full border-b bg-white">
+  <div className="w-full px-5 lg:px-20 mx-auto"> 
+
+    <div className="flex h-16 items-center justify-between">
+      {/* Left Section - Logo & Brand Name */}
+      <div className="flex items-center gap-10">
+        <Link href="/" className="flex items-center space-x-4"> {/* Increased gap */}
+          <Image src="/loggo.jpg" alt="Prasunet Logo" width={40} height={40} />
+          <span className="text-lg font-bold tracking-widest text-gray-900 drop-shadow-lg scale-x-125">
+            PRASUNET
+          </span>
+        </Link>
+      </div>
 
           {/* Right Section - Navigation */}
           <div className="hidden md:flex items-center gap-6">
@@ -64,6 +65,12 @@ export function Navbar() {
               className="relative font-bold text-xl tracking-tight text-gray-700 transition-all duration-300 hover:text-blue-400 hover:underline underline-offset-8 decoration-2"
             >
               Program
+            </Link>
+            <Link
+              href="/news"
+              className="relative font-bold text-xl tracking-tight text-gray-700 transition-all duration-300 hover:text-blue-400 hover:underline underline-offset-8 decoration-2"
+            >
+             News
             </Link>
             <Link
               href="/contact"

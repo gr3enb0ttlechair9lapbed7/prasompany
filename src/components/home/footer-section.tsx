@@ -48,9 +48,9 @@ export function Footer() {
               <Image src="/loggo.jpg" alt="Prasunet Logo" width={50} height={50} />
               <div>
                 <h2 className="text-2xl font-bold">
-                  <span className="bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400 bg-clip-text text-transparent">
-                    PRASUNET COMPANY
-                  </span>
+                    <span className="text-lg font-bold tracking-widest text-gray-900 drop-shadow-lg scale-x-125">
+            PRASUNET
+          </span>
                 </h2>
                 <p className="mt-2 text-muted-foreground">
                   Empowering businesses with innovative IT solutions. We provide cutting-edge services to help your business grow and thrive in the digital world.
