@@ -141,8 +141,8 @@ export function Navbar() {
               </Link>
 <Link
               href="/news"
-              className="relative font-bold text-xl tracking-tight text-gray-700 transition-all duration-300 hover:text-blue-400 hover:underline underline-offset-8 decoration-2"
-            >
+              className="block px-3 py-2 text-base font-semibold text-gray-700 tracking-wide hover:text-blue-500 hover:underline transition-all duration-300"
+                onClick={() => setIsMobileMenuOpen(false)} >
              News
             </Link>
               <Link
