@@ -20,39 +20,39 @@ import {
 } from "react-icons/fa";
 
 const TechNewsPage = () => {
-  const newsItems = [
-    {
-      title: "Quantum Leap",
-      description:
-        "Global AI Summit 2025 announces processors with 1000+ qubits, redefining speed, accuracy, and next-gen computing.",
-      image: "/quantum leap.jpeg",
-    },
-    {
-      title: "Global Impact",
-      description:
-        "World leaders discuss ethical AI, sustainability, and policies to shape a responsible digital future.",
-      image: "/Impact of artificial intelligence.png",
-    },
-    {
-      title: "Next-Gen Robotics",
-      description:
-        "Robotics breakthroughs integrate AI to perform complex tasks autonomously, from healthcare to manufacturing.",
-      image: "/nextgenrobotic.jpg",
-    },
-    {
-      title: "AI in Education",
-      description:
-        "Adaptive AI tools revolutionize learning by personalizing content and tracking student progress in real-time.",
-      image: "/aiineducation.jpeg",
-    },
-    {
-      title: "Human-AI Synergy",
-      description:
-        "AI systems now co-create with scientists, artists, and innovators, blending human creativity with advanced machine intelligence.",
-      image: "/humanaisynergy.jpg",
-    },
-  ];
-
+   const newsItems = [
+  {
+    title: "Quantum Leap",
+    description:
+      "Global AI Summit 2025 announces processors with 1000+ qubits, redefining speed, accuracy, and next-gen computing.",
+    image: "/quantum leap.jpeg", // replace with your image path
+  },
+  
+  {
+    title: "Global Impact",
+    description:
+      "World leaders discuss ethical AI, sustainability, and policies to shape a responsible digital future.",
+    image: "/Impact of artificial intelligence.png",
+  },
+  {
+    title: "Next-Gen Robotics",
+    description:
+      "Robotics breakthroughs integrate AI to perform complex tasks autonomously, from healthcare to manufacturing.",
+    image: "/nextgenrobotic.jpg",
+  },
+  {
+    title: "AI in Education",
+    description:
+      "Adaptive AI tools revolutionize learning by personalizing content and tracking student progress in real-time.",
+    image: "/aiineducation.jpeg",
+  },
+  {
+    title: "Human-AI Synergy",
+    description:
+      "AI systems now co-create with scientists, artists, and innovators, blending human creativity with advanced machine intelligence.",
+    image: "/humanaisynergy.jpg",
+  },
+];
   const magazines = [
     { title: "Tech Today - August Edition", img: "/techtodaymagzines.webp" },
     { title: "AI Weekly - Special Report", img: "/aiweekly.webp" },
