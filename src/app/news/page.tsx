@@ -22,8 +22,8 @@ const TechNewsPage = () => {
   [
   {
     title: "AI Revolution: ChatGPT is Changing the World",
-    slug: "ai-revolution-chatgpt-is-changing-the-world", // 🔑 Added slug
-    desc: "Artificial Intelligence is reshaping industries from healthcare to education. Businesses are leveraging AI to automate workflows, personalize experiences, and unlock new innovations.",
+    slug: "ai-revolution-chatgpt-is-changing-the-world",
+    desc: "Artificial Intelligence is reshaping industries from healthcare to education...",
     img: "/chatgptimg.webp",
     author: "Tech Analyst",
     date: "Aug 21, 2025",
@@ -32,7 +32,7 @@ const TechNewsPage = () => {
   {
     title: "Meta Launches New AR Glasses",
     slug: "meta-launches-new-ar-glasses",
-    desc: "Meta introduces lightweight AR glasses designed for immersive experiences in gaming, work, and social interactions. Early adopters highlight its futuristic design.",
+    desc: "Meta introduces lightweight AR glasses designed for immersive experiences...",
     img: "/metaglass.jpg",
     author: "Sarah Lee",
     date: "Aug 19, 2025",
@@ -41,7 +41,7 @@ const TechNewsPage = () => {
   {
     title: "Cybersecurity Threats Surge in 2025",
     slug: "cybersecurity-threats-surge-in-2025",
-    desc: "Experts warn of deepfake attacks, ransomware, and phishing scams. Enterprises are prioritizing AI-driven monitoring for protection.",
+    desc: "Experts warn of deepfake attacks, ransomware, and phishing scams...",
     img: "/cybersecurity2025.jpg",
     author: "John Carter",
     date: "Aug 17, 2025",
