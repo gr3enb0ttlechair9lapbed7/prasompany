@@ -119,56 +119,58 @@ const TechNewsPage = () => {
       </section>
 
       {/* FEATURED BREAKING NEWS */}
-      <section className="relative bg-gradient-to-r from-slate-700 via-slate-600 to-blue-700 text-white py-16 overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-12">
-            Featured Breaking News
-          </h2>
+    <section className="relative bg-gradient-to-r from-slate-700 via-slate-600 to-blue-700 text-white py-16 overflow-hidden">
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/20"></div>
 
-          <Swiper
-            modules={[Autoplay, Pagination]}
-            autoplay={{ delay: 5000, disableOnInteraction: false }}
-            pagination={{ clickable: true }}
-            loop
-            spaceBetween={30}
-            breakpoints={{
-              640: { slidesPerView: 1 },
-              1024: { slidesPerView: 2 },
-            }}
-          >
-            {newsItems.map((item, index) => (
-              <SwiperSlide key={index}>
-                <div className="bg-white/10 rounded-2xl shadow-md overflow-hidden hover:bg-white/20 transition flex flex-col md:flex-row items-center">
-                  <div className="md:w-1/2 w-full h-48 md:h-auto relative">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="md:w-1/2 w-full p-6 text-left">
-                    <h3 className="text-2xl font-semibold mb-4">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-200 text-base">
-                      {item.description}
-                    </p>
-                  </div>
+      <div className="relative container mx-auto px-6 text-center">
+        {/* Headline */}
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-12 tracking-wide">
+          Featured Breaking News
+        </h2>
+
+        {/* Swiper Slider */}
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          loop={true}
+          spaceBetween={30}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            1024: { slidesPerView: 2 },
+          }}
+        >
+          {newsItems.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="bg-white/10 rounded-2xl shadow-md overflow-hidden hover:bg-white/20 transition flex flex-col md:flex-row items-center">
+                {/* Image */}
+                <div className="md:w-1/2 w-full h-48 md:h-auto">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
 
-          <div className="mt-12">
-            <button className="px-8 py-3 rounded-full bg-blue-400 text-gray-900 font-semibold shadow-md hover:bg-blue-300 transition">
-              Read Full Coverage →
-            </button>
-          </div>
+                {/* Text Content */}
+                <div className="md:w-1/2 w-full p-6 text-left">
+                  <h3 className="text-2xl font-semibold mb-4">{item.title}</h3>
+                  <p className="text-gray-200 text-base">{item.description}</p>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        {/* CTA */}
+        <div className="mt-12">
+          <button className="px-8 py-3 rounded-full bg-blue-400 text-gray-900 font-semibold shadow-md hover:bg-blue-300 transition">
+            Read Full Coverage →
+          </button>
         </div>
-      </section>
-
+      </div>
+    </section>
       {/* LATEST NEWS */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-6">
