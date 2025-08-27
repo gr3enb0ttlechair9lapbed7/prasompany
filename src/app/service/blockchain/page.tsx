@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 import Navbar from "@/components/home/header/navbar";
 import Footer from "@/components/home/footer-section";
+import Image from "next/image";
 
 export default function BlockchainWeb3Solutions() {
   return (
@@ -27,10 +28,7 @@ export default function BlockchainWeb3Solutions() {
           playsInline
           className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
         >
-          <source
-            src="/servicesvideo/blockchainvideo.mp4"
-            type="video/mp4"
-          />
+          <source src="/servicesvideo/blockchainvideo.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/70 to-transparent z-0" />
         <div className="relative z-10 text-center px-6">
@@ -58,9 +56,11 @@ export default function BlockchainWeb3Solutions() {
 
       {/* About Section */}
       <section className="py-20 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        <img
+        <Image
           src="/servicesimages/softwaredevelopmentimg1.jpg"
           alt="Blockchain Solutions"
+          width={600}
+          height={400}
           className="rounded-2xl shadow-2xl"
         />
         <div>
@@ -180,9 +180,11 @@ export default function BlockchainWeb3Solutions() {
                 key={idx}
                 className="bg-gray-800 rounded-2xl overflow-hidden shadow hover:shadow-xl transition-all duration-300"
               >
-                <img
+                <Image
                   src={ind.img}
                   alt={ind.name}
+                  width={400}
+                  height={160}
                   className="h-40 w-full object-cover"
                 />
                 <div className="p-5 text-left">
@@ -240,11 +242,12 @@ export default function BlockchainWeb3Solutions() {
                 key={idx}
                 className="flex flex-col md:flex-row bg-gray-800 rounded-xl overflow-hidden shadow hover:shadow-2xl"
               >
-                <div className="md:w-1/2 h-64 md:h-auto">
-                  <img
+                <div className="md:w-1/2 h-64 md:h-auto relative">
+                  <Image
                     src={cs.img}
                     alt={cs.title}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 <div className="md:w-1/2 p-6">
@@ -294,7 +297,7 @@ export default function BlockchainWeb3Solutions() {
             Ready to Embrace Web3 Transformation?
           </h2>
           <p className="text-lg mb-6">
-            Connect with Prasunet's blockchain experts to build decentralized
+            Connect with Prasunet&apos;s blockchain experts to build decentralized
             solutions that redefine your industry.
           </p>
           <a
