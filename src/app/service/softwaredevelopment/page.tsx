@@ -23,7 +23,7 @@ export default function SoftwareDevelopment() {
           className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
         >
           <source
-            src="/servicesvideo/softwaredevelopmentvideo.mp4"
+            src="/servicesvideo/softwaredevlopmentvideo.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.
