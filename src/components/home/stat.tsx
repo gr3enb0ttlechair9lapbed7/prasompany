@@ -6,7 +6,48 @@ const ServicesPage = () => {
   return (
     <div className="bg-gray-50">
       {/* ...other sections... */}
+<section
+  className="relative min-h-screen bg-cover bg-center flex items-center justify-center"
+  style={{ backgroundImage: "url('/it_excllence.jpg')" }} // update with your image path
+>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
+  {/* Content */}
+  <div className="relative z-10 flex flex-col items-center justify-center text-center text-white px-4 sm:px-6 lg:px-8 py-16 w-full">
+    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 leading-snug">
+      Driving IT Excellence
+    </h2>
+
+    {/* Cards Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-6xl">
+      {[
+        {
+          title: "Agility in Execution",
+          desc: "We adapt quickly to evolving business needs with cutting-edge technology and methodologies.",
+        },
+        {
+          title: "Client-Centric Approach",
+          desc: "Our success is measured by client satisfaction and long-term partnerships.",
+        },
+        {
+          title: "End-to-End Services",
+          desc: "From strategy to implementation, we cover the entire IT lifecycle.",
+        },
+      ].map((card, idx) => (
+        <div
+          key={idx}
+          className="bg-white bg-opacity-90 rounded-xl shadow p-6 hover:shadow-xl transition text-gray-900"
+        >
+          <h3 className="text-xl sm:text-2xl font-semibold text-blue-900 mb-3">
+            {card.title}
+          </h3>
+          <p className="text-gray-700 text-sm sm:text-base">{card.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 text-blue-900">
