@@ -18,14 +18,7 @@ import {
   FaTag,
 } from "react-icons/fa";
 
-const TechNewsPage = () => {
-  // removed unused array
-  const newsItems = [ ... ];
-  const magazines = [ ... ];
-  const videos = [ ... ];
 
-  return ( ... );
-};
   const newsItems = [
   {
     title: "Quantum Leap",
