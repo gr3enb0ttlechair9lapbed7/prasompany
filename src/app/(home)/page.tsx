@@ -16,19 +16,14 @@ import Testimonials from "@/components/home/testimonail";
 import Industries from "@/components/home/Industries";
 import Message from "@/components/home/message";
 
-
 import Image from "next/image";
-import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Lightbulb, Rocket, Users, Star } from "lucide-react";
-import { Target, TrendingUp, Briefcase, Globe } from "lucide-react";
-import {  Search, BarChart, Code } from "lucide-react";
+import { Target, TrendingUp, Briefcase, Globe, Search, BarChart, Code } from "lucide-react";
 
 export default function Home() {
-  const [isHovered, setIsHovered] = useState(false);
   const steps = [
-{
+    {
       num: "01",
       title: "Consult & Research",
       desc: "Understanding client needs and mapping opportunities.",
