@@ -18,7 +18,38 @@ import {
   FaTag,
 } from "react-icons/fa";
 
+const TechNewsPage = () => {
+  [
+  {
+    title: "AI Revolution: ChatGPT is Changing the World",
+    slug: "ai-revolution-chatgpt-is-changing-the-world", // 🔑 Added slug
+    desc: "Artificial Intelligence is reshaping industries from healthcare to education. Businesses are leveraging AI to automate workflows, personalize experiences, and unlock new innovations.",
+    img: "/chatgptimg.webp",
+    author: "Tech Analyst",
+    date: "Aug 21, 2025",
+    category: "Artificial Intelligence",
+  },
+  {
+    title: "Meta Launches New AR Glasses",
+    slug: "meta-launches-new-ar-glasses",
+    desc: "Meta introduces lightweight AR glasses designed for immersive experiences in gaming, work, and social interactions. Early adopters highlight its futuristic design.",
+    img: "/metaglass.jpg",
+    author: "Sarah Lee",
+    date: "Aug 19, 2025",
+    category: "AR & VR",
+  },
+  {
+    title: "Cybersecurity Threats Surge in 2025",
+    slug: "cybersecurity-threats-surge-in-2025",
+    desc: "Experts warn of deepfake attacks, ransomware, and phishing scams. Enterprises are prioritizing AI-driven monitoring for protection.",
+    img: "/cybersecurity2025.jpg",
+    author: "John Carter",
+    date: "Aug 17, 2025",
+    category: "Cybersecurity",
+  },
 
+
+  ];
   const newsItems = [
   {
     title: "Quantum Leap",
