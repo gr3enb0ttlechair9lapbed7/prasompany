@@ -112,7 +112,7 @@ export default function AfricaProgramPage() {
             opportunities, and leadership training — built specifically for
             African students ready to shape tomorrow.
           </p>
-          <Link href="https://forms.gle/JKBpRf7WPjExcEPR6">
+          <Link href="https://forms.gle/yD7gcShmmW6gMmW16">
             <button className="mt-8 px-8 py-4 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold rounded-lg shadow-lg">
               Join the Program
             </button>
