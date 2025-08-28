@@ -607,9 +607,9 @@ export default function ProgramPage() {
     </h2>
 
     <div className="max-w-3xl mx-auto space-y-8">
-      <blockquote className="italic text-lg md:text-xl text-gray-800 dark:text-gray-200 relative before:content-['“'] before:text-5xl before:text-blue-400 before:absolute before:-left-6 before:-top-6">
-        "At Prasunet, we believe that innovation today shapes the world of tomorrow. Our mission is to empower businesses with technology that drives growth and sustainability."
-      </blockquote>
+     <blockquote className="italic text-lg md:text-xl text-gray-800 dark:text-gray-200 relative before:content-['“'] before:text-5xl before:text-blue-400 before:absolute before:-left-6 before:-top-6">
+  {"At Prasunet, we believe that innovation today shapes the world of tomorrow. Our mission is to empower businesses with technology that drives growth and sustainability."}
+</blockquote>
 
       <p className="text-gray-600 dark:text-gray-400 font-semibold"> Pramod Prajapat, CEO, Prasunet</p>
 
